@@ -106,7 +106,7 @@ def get_minutes(minutes):
     >>> get_minutes(3800)
     3
     """
-    return (minutes // 60 - 60)
+    return (minutes // 60) % 60
 
 
 ### Write your get_seconds function definition here:
