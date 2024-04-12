@@ -30,8 +30,8 @@ def mystery(s):
 def example(L):
     '''(list) -> list
     Return a list containing the items from L starting from index 0, omitting every third item.
-    Return an empty list. //YYY
-    Return a list containing every third item from L starting at index 0.
+    Return an empty list.
+    Return a list containing every third item from L starting at index 0. //YYY
     Return a list containing every third index from L starting at index 0.
     '''
     i = 0
@@ -71,7 +71,7 @@ def compress_list(L):
     
 
 print (sum(range(1523, 10504, 2))) // 27004383
-
+print (sum(range(524, 10508 + 1, 2))) // 27541388
 
 def while_version(L):
     (list of number) -> number
@@ -85,7 +85,7 @@ def while_version(L):
 
     return total
     '''
-
+'''
 def increment_items(L, increment):
     i = 0
     while i < len(L):
@@ -95,8 +95,36 @@ def increment_items(L, increment):
 values = [1, 2, 3]
 print(increment_items(values, 2))
 print(values)
-'''
+
 None
 [3, 4, 5]
 '''
 
+'''
+a = [1, 2, 3]
+b = a
+
+
+(a)
+    a = [1, 'A', 3]
+    b = [1, 'A', 3]
+(b)
+    b[1] = ’AB’
+    a[1] = a[1][0]
+(c)
+    a[1] = 'A'
+(d)
+    b[-2] = ’A’
+
+print(a, b)
+'''
+
+
+def cap_song_repetition(playlist, song):
+    '''(list of str, str) -> NoneType
+    ['Lola', 'Venus', 'Lola', 'Lola', 'Let It Be', 'Lola', 'ABC', 'Cecilia', 'Lola', 'Lola']
+    Make sure there are no more than 3 occurrences of song in playlist.
+
+    '''
+    while playlist.count(song) > 3:
+        playlist.remove(playlist.index(song))
