@@ -25,6 +25,8 @@ Here are several examples of lists being modified:
 
 <h3>Aliasing</h3>
 
+This is called aliasing, when two variables both contain the same memory address, aliasing happens.
+
     Consider the following code:
 
     >>> lst1 = [11, 12, 13, 14, 15, 16, 17]
@@ -34,3 +36,19 @@ Here are several examples of lists being modified:
     [11, 12, 13, 14, 15, 16, 18]
     
 After the second statement executes, lst1 and lst2 both refer to the same list. When two variables refer to the same objects, they are aliases. If that list is modified, both of lst1 and lst2 will see the change.
+
+    def double_even_indices(lst):
+        ''' (list of int) -> NoneType
+
+        Double everyother int in list, starting at index 0.
+        '''
+
+        i = 0
+        while i < len(lst):
+            lst[i] *= 2
+            i += 2
+
+    list1 = [11, 12, 13, 14, 15, 16, 17]
+    print(list1)
+    double_even_indices(list1)
+    print(list1)

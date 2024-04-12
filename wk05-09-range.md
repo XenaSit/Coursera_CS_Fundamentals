@@ -9,6 +9,13 @@ The example below will print the integers 0 to 9, inclusive.
     for i in range(10):
         print (i)
 
+    1
+    2
+    3
+    4
+    5
+    ..
+
 The form of range is:
 
     range([start,] stop[, step]):
@@ -21,13 +28,26 @@ There are other options you can specify to range. One option is to let range gen
     s = 'computer science'
     for i in range(len(s)):
         print(i)
+    
+    output: 0 through 15
 
 You can also tell range what index to start at. For instance, the example below starts at index 1 (as opposed to the default which is 0).
 
     for i in range(1, len(s)):
         print(i)
+    
+    output: 1 through 15
 
 You can even specify the "step" for range. The default stepping size is 1, which means that numbers increment by 1. The example below starts at index 1 and its step size is there (goes to every third index).
 
-    for i in range(1, len(s), 3):
+    for i in range(1, len(s), 2):
         print(i)
+
+    1
+    3
+    5
+    7
+    9
+    11
+    13
+    15

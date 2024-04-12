@@ -6,6 +6,7 @@ The general form of a list is:
 
     [expr1, expr2, ..., exprN]
     For example, here is a list of three grades:
+    
     grades = [80, 90, 70]
 
 <h3>List Operations</h3>
