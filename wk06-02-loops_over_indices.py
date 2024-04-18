@@ -5,6 +5,16 @@ def shift_left(L):
     and shift the first item to the last position.
 
     Precondition: len(L) >= 1
+    >>> shift_left(['a', 'b', 'c', 'd'])
+    L = ['a', 'b', 'c', 'd']
+    shift_left(L)
+    print(L)
+    OUTPUT
+    ['b', 'c', 'd', 'a']
+
+    letters = ['a', 'b', 'c', 'd']
+    print(shift_left(letters))
+    print (letters)
     '''
     
     first_item = L[0]
@@ -13,6 +23,7 @@ def shift_left(L):
         L[i - 1] = L[i]
 
     L[-1] = first_item      
+
     
 
 def count_adjacent_repeats(s):
@@ -32,3 +43,13 @@ def count_adjacent_repeats(s):
             repeats = repeats + 1
 
     return repeats
+
+# Class Examples ==========================================
+s = 'wepoi'
+for i in range(len(s) - 1):
+    print(i)\
+# OUTPUT
+# 0
+# 1
+# 2
+# 3
