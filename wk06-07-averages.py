@@ -23,3 +23,21 @@ def averages(grades):
         averages.append(total / len(grades_list))
 
     return averages
+
+grades = [[70, 75, 80], [70, 80, 90, 100], [80, 100]]
+averages(grades)
+
+'''
+    >>> grades = [[70, 75, 80], [70, 80, 90, 100], [80, 100]]
+    >>> english = grades[0]
+    [70, 75, 80]
+
+    >>> total = 0
+    >>> for mark in english:
+            total = total + 1
+
+    >>> total
+    225
+    >>> total / len(english)
+    75    
+    '''
