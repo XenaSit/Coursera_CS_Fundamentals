@@ -47,7 +47,7 @@ def count_adjacent_repeats(s):
 # Class Examples ==========================================
 s = 'wepoi'
 for i in range(len(s) - 1):
-    print(i)\
+    print(i)
 # OUTPUT
 # 0
 # 1
