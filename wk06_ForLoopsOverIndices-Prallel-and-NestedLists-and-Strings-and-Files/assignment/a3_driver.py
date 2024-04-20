@@ -3,21 +3,21 @@ import a3
 
 
 def print_board(board):
-    """ (list of str) -> NoneType
+    ''' (list of str) -> NoneType
 
     Display the contents of board.
-    """
+    '''
 
     for row_idx in range(len(board)):
         print(a3.make_str_from_row(board, row_idx))
 
 
 def get_players_list():
-    """() -> list of [str, int] list
+    '''() -> list of [str, int] list
 
     Prompt the player(s) to enter their names and return a list of player info
     as a two-item list with name and score, respectively.
-    """
+    '''
 
     players = []
     player = input('Enter player 1 name: ')
@@ -38,10 +38,10 @@ def get_players_list():
 
 
 def play_game(players, board, words):
-    """ (list of [str, int] list, list of list of str, list of str) -> NoneType
+    ''' (list of [str, int] list, list of list of str, list of str) -> NoneType
 
     Play the game with players, board and words.
-    """
+    '''
     num_remaining = a3.num_words_on_board(board, words) - len(found_words)
     player_num = 0
     while num_remaining > 0:
@@ -63,10 +63,10 @@ def play_game(players, board, words):
 
 
 def print_headers(players, board, found_words, num_remaining):
-    """ (list of [str, int] list, list of list of str, list of str, int) -> NoneType
+    ''' (list of [str, int] list, list of list of str, list of str, int) -> NoneType
 
     Play the score, board, and some other details.
-    """
+    '''
 
     print_score(players)
     print_board(board)
@@ -75,10 +75,10 @@ def print_headers(players, board, found_words, num_remaining):
 
 
 def print_score(players):
-    """ (list of [str, int] list) -> NoneType
+    ''' (list of [str, int] list) -> NoneType
 
     Print the scores for each of the players.
-    """
+    '''
     for name, score in players:
         print('  ' + str(score).rjust(3) + '\t' + name)
 

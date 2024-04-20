@@ -41,7 +41,8 @@ def contains(value, lst):
 
    # CODE MISSING HERE
    
-   return found'''
+   return found
+   '''
 
 # Select the code fragment(s) that make the function above match its docstring description.
 
@@ -60,7 +61,7 @@ def contains(value, lst):
 def lines_startswith(file, letter):
      ''' (file open for reading, str) -> list of str
 
-     Return the list of lines from file that begin with letter.     The lines should have thenewline removed.
+     Return the list of lines from file that begin with letter. The lines should have thenewline removed.
 
     Precondition: len(letter) == 1
 
