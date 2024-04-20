@@ -188,12 +188,11 @@ def num_words_on_board(board, words):
     3
     '''
     score = 0
-    i = 0
-    for char in board:
-        if words[i] in board:
+
+    for word in words:
+        if board_contains_word(board, word):
             score = score + 1
     return score
-    
 
 
 def read_words(words_file):
@@ -206,6 +205,14 @@ def read_words(words_file):
     from the standard English alphabet.
     '''
 
+    words = []
+
+    for line in words_file:
+        word = line.strip()
+        words.append(word)
+
+    return words
+
 
 def read_board(board_file):
     ''' (file open for reading) -> list of list of str
@@ -213,4 +220,12 @@ def read_board(board_file):
     Return a board read from open file board_file. The board file will contain
     one row of the board per line. Newlines are not included in the board.
     '''
+
+    board = []
+
+    for line in board_file:
+        row = list(line.strip())
+        board.append(row)
+
+    return board
 
