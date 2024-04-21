@@ -5,6 +5,7 @@ Dictionaries have keys that are unique and each key has a value associated with 
 fruit_to_colour = {'watermelon': 'green', 'pomegranate': 'red',
 'peach': 'orange', 'cherry': 'red', 'pear': 'green',
 'banana': 'yellow', 'plum': 'purple', 'orange': 'orange'}
+
 To invert the dictionary, that is, switch the mapping to be colours to fruit, here is one approach:
 
 >>> colour_to_fruit = {}
@@ -15,9 +16,13 @@ To invert the dictionary, that is, switch the mapping to be colours to fruit, he
 
 >>> colour_to_fruit
 {'orange': 'orange', 'purple': 'plum', 'green': 'pear', 'yellow': 'banana', 'red': 'pomegranate'}
+
 The resulting dictionary is missing some fruit. This happens since colours, which are keys, are unique so later assignments using the same colour replace earlier entries. A way to remedy this is to map colours to a list of fruit.
 
+
 Mapping A Key To A List
+
+
 For the example above, we need to consider two cases when adding a colour and a fruit to the dictionary:
 If the colour is not a key in the dictionary, add it with its value being a single element a list consisting of the fruit.
 If the colour is already a key, append the fruit to the list of fruit associated with that key.
