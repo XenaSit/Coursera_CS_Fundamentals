@@ -70,11 +70,14 @@ A dictionary can be empty. For example:
 
 d = {}
 Heterogeneous Dictionaries
+
 A dictionary can have keys of different types. For example, one key can be of type int and another of type str:
 
 d = {'apple': 1, 3: 4}
+
 Immutable Keys
 The keys of a dictionary must be immutable. Therefore, lists, dictionary and other mutable types cannot be used as keys. The following results in an error:
 d[[1, 2]] = 'banana'
+
 Since lists are mutable, they cannot be keys. Instead, to use a sequence as a key, type tuple can be used:
 d[(1, 2)] = 'banana'
